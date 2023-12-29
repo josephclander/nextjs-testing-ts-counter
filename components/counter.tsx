@@ -11,6 +11,10 @@ export default function Counter() {
     setCounter((counter) => counter + 1);
   };
 
+  const handleDecrement = () => {
+    setCounter((counter) => counter - 1);
+  };
+
   return (
     <div className="counter__container">
       <div className="counter__display">{counter}</div>
@@ -18,7 +22,9 @@ export default function Counter() {
         <button onClick={handleIncrement} className="counter__increment">
           +
         </button>
-        <button className="counter__decrement">-</button>
+        <button onClick={handleDecrement} className="counter__decrement">
+          -
+        </button>
       </div>
     </div>
   );
