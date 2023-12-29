@@ -7,11 +7,17 @@ import React from 'react';
 export default function Counter() {
   const [counter, setCounter] = useState<number>(0);
 
+  const handleIncrement = () => {
+    console.log('Increase!');
+  };
+
   return (
     <div className="counter__container">
       <div className="counter__display">{counter}</div>
       <div className="counter__buttons">
-        <button className="counter__increment">+</button>
+        <button onClick={handleIncrement} className="counter__increment">
+          +
+        </button>
         <button className="counter__decrement">-</button>
       </div>
     </div>
