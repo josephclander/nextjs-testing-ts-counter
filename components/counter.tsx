@@ -4,8 +4,12 @@ import { useState } from 'react';
 
 import React from 'react';
 
-export default function Counter() {
-  const [counter, setCounter] = useState<number>(0);
+type CounterProps = {
+  initialCount?: number;
+};
+
+export default function Counter({ initialCount = 0 }: CounterProps) {
+  const [counter, setCounter] = useState<number>(initialCount);
 
   const handleIncrement = () => {
     setCounter((counter) => counter + 1);
