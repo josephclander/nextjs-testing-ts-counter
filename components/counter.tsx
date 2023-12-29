@@ -8,7 +8,7 @@ export default function Counter() {
   const [counter, setCounter] = useState<number>(0);
 
   const handleIncrement = () => {
-    console.log('Increase!');
+    setCounter((counter) => counter + 1);
   };
 
   return (
