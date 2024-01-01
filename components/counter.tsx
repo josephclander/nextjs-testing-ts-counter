@@ -1,4 +1,5 @@
 'use client';
+// counter.tsx
 
 import { useState } from 'react';
 
@@ -21,7 +22,9 @@ export default function Counter({ initialCount = 0 }: CounterProps) {
 
   return (
     <div className="counter__container">
-      <div className="counter__display">{counter}</div>
+      <div className="counter__display" role="status">
+        {counter}
+      </div>
       <div className="counter__buttons">
         <button onClick={handleIncrement} className="counter__increment">
           +
